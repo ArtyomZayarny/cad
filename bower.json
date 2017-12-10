@@ -1,0 +1,14 @@
+{
+  "name": "CreativeAgancyDigital_bootstrap",
+  "description": "Bootrstrap_project",
+  "main": "gulpfile.js",
+  "author": "Timaz",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "foundation-sites": "^6.4.3"
+  }
+}

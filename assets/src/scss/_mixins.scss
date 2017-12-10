@@ -1,0 +1,55 @@
+$white:#ffffff;
+$white2:#fefefb;
+$white3:#fefbfc;
+$white4: #fefcfd;
+$gray:#ebebeb;
+$gray2:#7d7a7c;
+$gray3:#665f60;
+$graydark:#665f60;
+@mixin bg-overlay(){
+	&:before{
+	 content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #9f9acf;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+	}
+}
+
+@mixin titles($color,$size,$weight){
+	        color: $color;
+					font-family: 'Raleway', sans-serif;
+					font-size: $size;
+					font-weight: $weight;
+					text-transform: uppercase;
+}
+@mixin italic-text($color,$size) {
+	      color: $color;
+				font-family: "PT Sans";
+				font-size: $size;
+				font-style: italic;
+}
+@mixin btn() {
+	border: 1px solid #7d7a7c;
+	cursor: pointer;
+	transition: all .3s ease;
+	&:hover{
+		background-color: #623553;
+		border: 1px solid #623553;
+	}
+}
+@mixin placeholder() {
+	&::-webkit-input-placeholder {
+color: #ffffff;
+font-family: "PT Sans";
+font-size: 18px;
+font-style: italic;
+line-height: 18px;
+	
+
+	}
+}

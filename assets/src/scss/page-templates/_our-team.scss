@@ -1,0 +1,24 @@
+.our-team {
+	background-color: $gray;
+  padding: 60px 0;
+@include media-breakpoint-down(sm){
+		display: none;
+	}
+	&__title-row{
+		@include make-row();
+		justify-content: center;
+		text-align: center;
+	}
+	&__text {
+		@include titles($graydark,36px,400);
+	}
+	&__slider{
+		
+		&__item{
+			width: 100%;
+			&__wrap{
+		
+			}
+		}
+	}
+}

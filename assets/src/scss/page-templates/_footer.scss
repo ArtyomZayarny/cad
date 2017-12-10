@@ -1,0 +1,32 @@
+.footer {
+	padding: 35px 0;
+	background-color: #9f9acf;
+	&__row{
+		@include make-row();
+		margin-top: 35px;
+	&__copy{
+		font-size: 18px;
+font-weight: 400;
+font-weight: 400;
+		color:#fff;
+letter-spacing: 0.36px;
+		padding: 20px 0;
+		@include make-col(6);
+		@include media-breakpoint-down(sm){
+					justify-content: center;
+					@include make-col(12);
+				}
+
+	}
+					&__social{
+		justify-content: flex-end;
+		@include make-col(6);
+				@include media-breakpoint-down(sm){
+					justify-content: center;
+					@include make-col(12);
+				}
+	}
+
+	}
+
+}

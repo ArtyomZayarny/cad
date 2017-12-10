@@ -1,0 +1,63 @@
+.header {
+	padding: 60px 0;
+	background: url("../../../assets/dist/img/cad-hero-bg.png")no-repeat center;
+	background-size: cover;
+	height: 100vh;
+	min-height: 700px;
+	position: relative;
+	z-index: 1;
+	@include bg-overlay();
+	@include media-breakpoint-down(sm) {
+		padding: 20px 0;
+	}
+	
+	&__row {
+		margin-bottom: 60px;
+    padding-bottom: 60px;
+		&__nav {
+			@include make-col-ready();
+			&__menu {
+				justify-content: flex-end;
+				&__item {
+					@include titles($white,24px,700);
+					color:#ffff!important;
+					&:hover{
+						color:#623553!important;
+					}
+				}
+			}
+		}
+		&__text {
+		   display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			
+		
+			&__title {
+				text-align: center;
+				@include titles($white2,72px,700);
+				@include make-col(10);
+				@include media-breakpoint-down(md){
+							font-size: 44px;
+				}
+				 @include media-breakpoint-down(sm) {
+					@include make-col(12);
+					font-size: 22px;
+				}
+			
+			}
+			&__desc {
+				@include italic-text($white,30px);
+				@include make-col(7);
+				text-align: center;
+					 @include media-breakpoint-down(sm) {
+					@include make-col(10);
+          font-size: 18px;
+						 
+				}
+				
+			}
+		}
+	}
+}

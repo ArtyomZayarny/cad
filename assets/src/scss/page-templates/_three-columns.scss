@@ -1,0 +1,100 @@
+.three-colums {
+	background-color: $gray;
+	&__row{
+		@include make-row();
+		&__left{
+			@include make-row();
+			@include make-col(8);
+				@include media-breakpoint-down(md){
+      @include make-col(12);
+			margin-left: 0;
+					margin-right: 0;
+					
+						}
+			@include media-breakpoint-down(sm){
+      @include make-col(12);
+			margin-left: 0;
+					margin-right: 0;
+					
+						}
+			&__block {
+				padding-top: 100px;
+				min-height: 400px;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+		@include make-col(6);
+				@include media-breakpoint-down(sm){
+					@include make-col(12);
+					border:2px solid #607d8b;
+					border-radius: 10px;
+				}
+				background-color: transparent;
+				&--bg{
+				 background-color: #dbdbdb;;
+				}
+				&__icon{
+					padding-bottom: 30px;
+				}
+				&__title{
+						@include italic-text($graydark,24px);
+					font-style: normal;
+					font-weight: 700;
+				}
+				&__desc{
+					text-align: center;
+					@include italic-text($graydark,18px);
+					@include make-col(6);
+				}
+			}
+		}
+		&__right{
+			@include make-col(4);
+			background: url("../../../assets/dist/img/third-bg.png")no-repeat center;
+			background-size: cover;
+			min-height: 799px;
+			position: relative;
+			z-index: 1;
+			@include bg-overlay();
+			display: flex;
+     flex-direction: column;
+     align-items: center;
+			padding-top: 112px;
+						@include media-breakpoint-down(md){
+						
+						@include make-col(12);
+							min-height: 1px;
+							padding-bottom: 100px;
+							
+							}
+			&__icon{
+				padding-bottom: 40px;
+			}
+			&__title{
+				@include titles($white4,36px,700)
+				padding-bottom: 60px;
+				@include media-breakpoint-down(md){
+						padding-bottom: 0;
+				
+					
+				}
+				
+				
+			}
+			&__desc{
+				text-align: center;
+				@include italic-text($white4,18px);
+				font-weight: 400;
+				@include media-breakpoint-down(md){
+			
+					@include make-col(4);
+			}	
+						@include media-breakpoint-down(sm){
+			
+					@include make-col(8);
+			}	
+		}
+	}
+	
+}
+}
