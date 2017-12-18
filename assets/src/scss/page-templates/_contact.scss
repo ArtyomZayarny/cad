@@ -18,11 +18,28 @@
 	}
 
 	&__adress-blocks{
-	display: flex;
-		max-width: 349px;
-		position: absolute;
-			right: 0;
-		z-index: 3;
+	  display: flex;
+		max-width: 90px;
+			height: 91px;
+    position: absolute;
+		right: 0;
+		overflow: hidden;
+		 z-index: 3;
+		transition: all 0.3s ease;
+		cursor: pointer;
+
+					-webkit-animation-name: slideOutRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: slideOutRight;
+    animation-duration: 2s;
+		animation-fill-mode:forwards;
+		&:hover{
+			-webkit-animation-name: slideInRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: slideInRight;
+    animation-duration: 2s;
+		animation-fill-mode:forwards;
+		}
 	
 	
 	
@@ -34,16 +51,35 @@
 			background-color: #ebebeb;
 		  padding: 10px 6px;
 			text-align: center;
-				min-height: 91px;
+			min-height: 91px;
+			position: relative;
+		
 		}
 	}
 	&__phone-block{
 	  display: flex;
-		//max-width: 349px;
 			position: absolute;
 			right: 0;
+    overflow: hidden;
+				max-width: 90px;
+			height: 91px;
 		top: 92px;
+		transition: all 0.3s ease;
+		cursor: pointer;
 		z-index: 3;
+		-webkit-animation-name: slideOutRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: slideOutRight;
+    animation-duration: 2s;
+		animation-fill-mode:forwards;
+		&:hover{
+			-webkit-animation-name: slideInRight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: slideInRight;
+    animation-duration: 2s;
+		animation-fill-mode:forwards;
+		}
+
 		&__img{
 			padding: 28px 35px;
 			background-color:#9f9acf;
@@ -51,10 +87,10 @@
 		}
 			&__text{
 			background-color: #ebebeb;
-		
-			  //text-align: center;
+		   text-align: center;
 				min-height: 91px;
 				padding: 35px 6px;
+				position: relative;
 		}
 	}	
 	&__form{
@@ -157,4 +193,14 @@
 				}
 		}
 }
+}
+
+@keyframes slideInRight {
+    from {max-width:91px;}
+    to {	max-width: 342px;}
+}
+
+@keyframes slideOutRight {
+    from {max-width: 342px;}
+    to {max-width:91px;}
 }
